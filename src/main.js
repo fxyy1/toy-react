@@ -23,6 +23,7 @@ class Board extends Component {
     render() {
         return (
             <div>
+                {/* 更新级别为 board-row，原本的 react 能做到 button 级别 */}
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -123,11 +124,7 @@ class Game extends Component {
 
 // ========================================
 
-// render(<Game />, document.getElementById('root'));
-
-let game = <Game />;
-
-console.log(game.vdom);
+render(<Game />, document.getElementById('root'));
 
 function calculateWinner(squares) {
     const lines = [
